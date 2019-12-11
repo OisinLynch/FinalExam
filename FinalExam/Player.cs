@@ -16,5 +16,25 @@ namespace FinalExam
         public Position PreferedPosition { get; set; }
         public DateTime DateOfBirth { get; set; }
         public int Age { get; set; }
+
+
+        //Methods
+        public override string ToString()
+        {
+            return $"{FirstName} {Surname} {(Age)} {PreferedPosition}";
+        }
+
+        internal void Add(Player selectedPlayer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int CompareTo(object obj)
+        {
+            Player that = (Player)obj;
+
+            //Compare one Player Position to another 
+            return this.PreferedPosition.CompareTo(that.PreferedPosition);
+        }
     }
 }

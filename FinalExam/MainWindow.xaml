@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalExam"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <ListBox x:Name="lbxPlayers" HorizontalAlignment="Left" Height="204" Margin="100,144,0,0" VerticalAlignment="Top" Width="161"/>
+        <ListBox x:Name="lbxPlayers" HorizontalAlignment="Left" Height="204" Margin="100,144,0,0" VerticalAlignment="Top" Width="198"/>
         <TextBlock x:Name="tblkAllPlayers" HorizontalAlignment="Left" Margin="100,110,0,0" TextWrapping="Wrap" Text="All Players" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkFormation" HorizontalAlignment="Left" Margin="202,40,0,0" TextWrapping="Wrap" Text="Formation" VerticalAlignment="Top"/>
         <ComboBox x:Name="cmbFromation" HorizontalAlignment="Left" Margin="285,40,0,0" VerticalAlignment="Top" Width="120"/>
-        <ListBox x:Name="lbxSelectedPlayers" HorizontalAlignment="Left" Height="204" Margin="480,144,0,0" VerticalAlignment="Top" Width="138"/>
+        <ListBox x:Name="lbxSelectedPlayers" HorizontalAlignment="Left" Height="204" Margin="480,144,0,0" VerticalAlignment="Top" Width="196"/>
         <TextBlock x:Name="tblkSelectedPlayers" HorizontalAlignment="Left" Margin="480,113,0,0" TextWrapping="Wrap" Text="Selected Players" VerticalAlignment="Top"/>
-        <Button x:Name="btnAdd" Content="Add &gt;&gt;" HorizontalAlignment="Left" Margin="330,190,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnRemove" Content="&lt;&lt;Remove" HorizontalAlignment="Left" Margin="330,273,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnAdd" Content="Add &gt;&gt;" HorizontalAlignment="Left" Margin="330,190,0,0" VerticalAlignment="Top" Width="75" Click="BtnAdd_Click"/>
+        <Button x:Name="btnRemove" Content="&lt;&lt;Remove" HorizontalAlignment="Left" Margin="330,273,0,0" VerticalAlignment="Top" Width="75" Click="BtnRemove_Click"/>
         <TextBlock x:Name="tblkSpaces" HorizontalAlignment="Left" Margin="480,380,0,0" TextWrapping="Wrap" Text="Spaces" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkSpacesTotal" HorizontalAlignment="Left" Margin="569,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
