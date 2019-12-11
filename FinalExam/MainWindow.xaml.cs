@@ -23,8 +23,12 @@ namespace FinalExam
         //Create Lists
         List<Player> allPlayers;
         List<Player> selectedPlayers = new List<Player>();
+        
         //Create Random
         Random rng = new Random();
+
+        //Player Spaces
+        int spaces = 11;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,6 +41,7 @@ namespace FinalExam
         {
             allPlayers = GetPlayers();
             lbxPlayers.ItemsSource = allPlayers;
+            tblkSpacesTotal.Text = spaces.ToString();
         }
 
         private List<Player> GetPlayers()
