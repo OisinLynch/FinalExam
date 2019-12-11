@@ -26,6 +26,9 @@ namespace FinalExam
         public MainWindow()
         {
             InitializeComponent();
+
+            string[] formationSelect = { "4-4-2", "4-3-3", "4-5-1" };
+            cmbFromation.ItemsSource = formationSelect;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -222,6 +225,9 @@ namespace FinalExam
             allPlayers.Add(p17);
             allPlayers.Add(p18);
 
+            //Sort by date
+            allPlayers.Sort();
+
             return allPlayers;
         }
 
@@ -236,6 +242,9 @@ namespace FinalExam
                 //Move activity from ActivitySelect box to SelectedActivity box
                 allPlayers.Remove(selectedPlayer); 
                 selectedPlayers.Add(selectedPlayer);
+
+                //Sort the seleced activities by date
+                selectedPlayers.Sort();
 
                 //Refreash screen
                 lbxPlayers.ItemsSource = null;

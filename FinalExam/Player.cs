@@ -8,7 +8,7 @@ namespace FinalExam
 {
     //Position enum
     public enum Position { Goakeeper, Defender, Midfielder, Forward }
-    class Player
+    class Player : IComparable
     {
         //Properties
         public string FirstName { get; set; }
@@ -36,5 +36,6 @@ namespace FinalExam
             //Compare one Player Position to another 
             return this.PreferedPosition.CompareTo(that.PreferedPosition);
         }
+
     }
 }
