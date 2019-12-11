@@ -15,8 +15,8 @@ namespace FinalExam
         public string Surname { get; set; }
         public Position PreferedPosition { get; set; }
         public DateTime DateOfBirth { get; set; }
+        public int _age { get; set; }
         public int Age { get; set; }
-
 
         //Methods
         public override string ToString()

@@ -20,8 +20,10 @@ namespace FinalExam
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Create Lists
         List<Player> allPlayers;
         List<Player> selectedPlayers = new List<Player>();
+        //Create Random
         Random rng = new Random();
         public MainWindow()
         {
@@ -41,6 +43,7 @@ namespace FinalExam
         {
             List<Player> allPlayers = new List<Player>();
 
+            //Create Players
             Player p1 = new Player()
             {
                 FirstName = "Adam",
@@ -203,6 +206,7 @@ namespace FinalExam
                 Age = 20
             };
 
+            //Add players to the list
             allPlayers.Add(p1);
             allPlayers.Add(p2);
 
@@ -225,7 +229,7 @@ namespace FinalExam
             allPlayers.Add(p17);
             allPlayers.Add(p18);
 
-            //Sort by date
+            //Sort by Position
             allPlayers.Sort();
 
             return allPlayers;
@@ -239,11 +243,11 @@ namespace FinalExam
             //Null check
             if (selectedPlayer != null)
             {
-                //Move activity from ActivitySelect box to SelectedActivity box
+                //Move Player from PlayerSelect box to SelectedPlayers box
                 allPlayers.Remove(selectedPlayer); 
                 selectedPlayers.Add(selectedPlayer);
 
-                //Sort the seleced activities by date
+                //Sort the seleced Players by Position
                 selectedPlayers.Sort();
 
                 //Refreash screen
@@ -257,7 +261,7 @@ namespace FinalExam
 
         private void BtnRemove_Click(object sender, RoutedEventArgs e)
         {
-            //Find what item is selected 
+            //Find what Player is selected 
             Player selectedPlayer = lbxSelectedPlayers.SelectedItem as Player;
 
             //Null check
@@ -267,6 +271,9 @@ namespace FinalExam
                 allPlayers.Add(selectedPlayer);
                 selectedPlayers.Remove(selectedPlayer);
 
+                //Sort the seleced Players by Position
+                allPlayers.Sort();
+
                 //Refreash screen
                 lbxPlayers.ItemsSource = null;
                 lbxPlayers.ItemsSource = allPlayers;
@@ -274,6 +281,8 @@ namespace FinalExam
                 lbxSelectedPlayers.ItemsSource = null;
                 lbxSelectedPlayers.ItemsSource = selectedPlayers;
             }
+
+            
         }
 
         //Methods
